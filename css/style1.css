@@ -1,0 +1,527 @@
+/*Gurjit Kaur 8622642*/
+*{
+box-sizing: border-box;
+}
+
+#wrapper{
+    width:80%;
+    margin:auto;
+    background-color:#f0f0f0;
+    border:2px solid black;
+    box-shadow: 3px 4px;
+    overflow:hidden;
+    border-style: outset;
+    font-family: cursive;
+    
+}
+
+header{
+    text-align: center;
+    overflow:hidden;
+}
+
+header img{
+    float:left;
+    background-color: black;
+    margin:1px;
+}
+
+nav{
+    width:100%;
+    text-align:center;
+     height:60px;
+     overflow:hidden;
+    background-color:rgba(43,101,181,1);
+}
+nav ul li{
+    width: 149px;
+    box-sizing: border-box;
+    overflow: visible;
+    list-style-type: none;
+    display: inline;
+    
+    
+}
+li .a{
+    padding:50px;
+    color:white;
+    text-decoration: none;
+    font-size:1.4em;
+    font-weight: bold;
+    text-align:center;
+}
+
+li .a:hover{
+    color: #000;
+    font-size:1.5em;
+
+}
+
+/*index page*/
+.main_slider {
+    position: relative;
+    overflow: hidden;
+    height: 60%;
+}
+
+.main_slider .slider {
+    height: 100%;
+    white-space: nowrap;
+    transition: 0.8s;
+}
+
+.main_slider .slider > * {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 100%;
+    background: none 50% no-repeat;
+    background-size: cover;
+}
+
+.main_slider .prevNext {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 100%;
+    height: 0;
+}
+
+.main_slider .prevNext > div + div {
+    visibility: hidden;
+}
+
+.main_slider .prevNext a {
+    background: #fff;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    opacity: 0.7;
+    text-decoration: none;
+    transform: translateY(-50%);
+}
+
+.main_slider .prevNext a:hover {
+    opacity: 1;
+}
+
+.main_slider .prevNext a + a {
+    right: 0px;
+}
+
+.main_slider .bullets {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    background: lightblue;
+}
+
+.main_slider .bullets > a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+    background: blue;
+}
+
+.main_slider .bullets > a + a {
+    background: white;
+}
+
+.main_slider .bullets > a:hover {
+    background: white;
+}
+
+.main_slider > s:target ~ .bullets > * {
+    background: white;
+}
+
+#a1:target ~ .bullets > *:nth-child(1) {
+    background: blue;
+}
+
+#a2:target ~ .bullets > *:nth-child(2) {
+    background: blue;
+}
+
+#a3:target ~ .bullets > *:nth-child(3) {
+    background: blue;
+}
+
+.main_slider > s:target ~ .prevNext > * {
+    visibility: hidden;
+}
+
+#a1:target ~ .prevNext > *:nth-child(1) {
+    visibility: visible;
+}
+
+#a2:target ~ .prevNext > *:nth-child(2) {
+    visibility: visible;
+}
+
+#a3:target ~ .prevNext > *:nth-child(3) {
+    visibility: visible;
+}
+
+#a1:target ~ .slider {
+    transform: translateX(0%);
+
+}
+
+#a2:target ~ .slider {
+    transform: translateX(-100%);
+
+}
+
+#a3:target ~ .slider {
+    transform: translateX(-200%);
+}
+
+/*Body Div*/
+
+#top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+
+
+.front_image {
+    width: 100%;
+    max-width: 100%;
+    max-height: 600px;
+}
+
+.flex_container {
+    padding: 5px;
+    display: flex;
+    background-color: #aaa;
+}
+
+.flex_container > div {
+    background-color: #f1f1f1;
+    width: 100%;
+    margin: 1px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+.courses_img {
+    float: left;
+    width: 300px;
+    max-width: 100%;
+    max-height: 300px;
+    padding: 15px;
+}
+.heading{
+    margin-top:70px;
+}
+.div_block {
+    text-align: center;
+    margin-top: 50px;
+    color: blue;
+}
+
+.block_lines {
+    text-align: center;
+}
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 #000000;
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#basic_btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+#standard_btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #fd7e14;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+#premium_btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.pricing_table h2 {
+    font-size: 1.5em;
+    padding: 35px 10px;
+    margin: 0;
+}
+
+.price,
+.price_box {
+    transition: all ease-out 0.2s;
+}
+
+.price {
+    background: #4a8eb2;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 600;
+    position: relative;
+    padding: 20px 10px;
+    display: block;
+}
+
+.price_box:nth-child(2) .price {
+    background: #216f99;
+}
+
+.price_box:nth-child(3) .price {
+    background: #02537f;
+}
+
+.pricing_table {
+    border-radius: 3px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    text-align: center;
+}
+
+.price_box {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000000;
+    border: 2px solid #0778b8;
+}
+
+.price_box:hover {
+    transform: scale(1.01);
+}
+
+.pricing_table ul li {
+    padding: 3px 0;
+    font-size: 0.95em;
+}
+
+.pricing_table ul {
+    color: #000;
+    padding: 15px 60px;
+    text-align: left;
+}
+
+
+
+/*store1 page*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+table .table{ width:100%;
+    
+}
+.table tr{
+    border-bottom: 1px solid #ddd;
+}
+.table th, .table td{
+    text-align: left;
+    padding:0.25em;
+}
+.fakeimg {
+    background-color: #CAE4DB;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+
+
+/*contact us*/
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 4px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.contact_container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.contact_column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+.contact_row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#cont_img{
+    width: 100%;
+}
+
+/* css for footer*/
+footer{
+    margin-top:10px;
+    font-style:italic;
+    font-weight: bold;
+    height:150px;
+    padding:2px 0px 9px 0px;
+    display: block;
+     background-color:rgba(43,101,181,1);
+    
+    
+}
+
+span{
+    color:white;
+}
+#foot{
+    font-size:1em;
+    text-align:center;
+    font-style: italic;
+    
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10%;
+    width: 20px;
+    height:5px;
+    margin-top: 3px;
+    display:block;
+}
+#sign{
+    float:right;
+    padding-bottom: 15px;
+    font-size:1.3em;
+    margin-right: 4px;
+    margin-bottom:5px;
+    display:inline-block;
+}
+.fa:hover {
+  opacity: 0.7;
+    
+}
+.fa-facebook {
+ 
+  color: white;
+    padding:5px;
+    margin:6px;
+    padding-bottom:20px;
+
+}
+
+.fa-twitter {
+  
+    padding:1px;
+    margin-bottom:6px;
+  color: white;
+    padding-bottom:20px;
+    
+}
+.fa-instagram{
+    padding-left:7px;
+    padding:5px;
+    margin-bottom:6px;
+    margin-right:6px;
+    color: white;
+    padding-bottom:20px;
+    
+}
